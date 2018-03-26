@@ -115,7 +115,7 @@ def main_loop():
             for missile in missiles_list1:
                 gameDisplay.blit(missile.sprite, (missile.x, missile.y))
                 if missile.x in range(x, x + 50) and \
-                        missile.y in range(y, y + 50):
+                        missile.y in range(y, y + 60):
                     score += 1
                     aliens_list.remove(alien)
                     missiles_list1.remove(missile)
@@ -123,7 +123,7 @@ def main_loop():
             for missile in missiles_list2:
                 gameDisplay.blit(missile.sprite, (missile.x, missile.y))
                 if missile.x in range(x, x + 50) and \
-                        missile.y in range(y, y + 50):
+                        missile.y in range(y, y + 80):
                     alien.sprite = pygame.image.load("./sprites/alien2.png")
                     alien.type = 0
                     alien.spawn_time = interval
